@@ -1,0 +1,10 @@
+$react-ant-editable-tag-options: () !default;
+
+.react-ant-editable-tag {
+  &__input {
+    width: 75px;
+    border-color: transparent;
+    background: none;
+    text-align: center;
+  }
+}
