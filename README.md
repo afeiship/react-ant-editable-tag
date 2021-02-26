@@ -1,38 +1,43 @@
 # react-ant-editable-tag
 > Editable tag for ant.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
+
 ## installation
 ```shell
-npm install -S @feizheng/react-ant-editable-tag
-```
-
-## update
-```shell
-npm update @feizheng/react-ant-editable-tag
+npm install -S antd@3
+npm install -S @jswork/react-ant-editable-tag
 ```
 
 ## properties
-| Name      | Type   | Default | Description                           |
-| --------- | ------ | ------- | ------------------------------------- |
-| className | string | -       | The extended className for component. |
-| onClose   | func   | noop    | When click close icon.                |
-| value     | union  | -       | The tag value.                        |
-| onChange  | func   | noop    | When value changed.                   |
+| Name      | Type   | Required | Default | Description                           |
+| --------- | ------ | -------- | ------- | ------------------------------------- |
+| className | string | false    | -       | The extended className for component. |
+| onClose   | func   | false    | noop    | When click close icon.                |
+| value     | union  | false    | -       | The tag value.                        |
+| onChange  | func   | false    | noop    | When value changed.                   |
 
 
 ## usage
 1. import css
   ```scss
-  @import "~@feizheng/react-ant-editable-tag/dist/style.scss";
+  @import "~@jswork/react-ant-editable-tag/dist/style.css";
+
+  // or use sass
+  @import "~@jswork/react-ant-editable-tag/dist/style.scss";
 
   // customize your styles:
   $react-ant-editable-tag-options: ()
   ```
 2. import js
   ```js
-  import ReactAntEditableTag from '@feizheng/react-ant-editable-tag';
-  import ReactDOM from 'react-dom';
+  import ReactDemokit from '@jswork/react-demokit';
   import React from 'react';
+  import ReactDOM from 'react-dom';
+  import ReactAntEditableTag from '@jswork/react-ant-editable-tag';
   import './assets/style.scss';
 
   class App extends React.Component {
@@ -47,8 +52,10 @@ npm update @feizheng/react-ant-editable-tag
     render() {
       const { value } = this.state;
       return (
-        <div className="app-container">
-          <button className="button" onClick={this.setRandomValue}>
+        <ReactDemokit
+          className="p-3 app-container"
+          url="https://github.com/afeiship/react-ant-editable-tag">
+          <button className="button is-primary is-fullwidth mb-2" onClick={this.setRandomValue}>
             SetRandomValue
           </button>
           <ReactAntEditableTag
@@ -58,7 +65,7 @@ npm update @feizheng/react-ant-editable-tag
               console.log(e.target.value);
             }}
           />
-        </div>
+        </ReactDemokit>
       );
     }
   }
@@ -69,3 +76,19 @@ npm update @feizheng/react-ant-editable-tag
 
 ## documentation
 - https://afeiship.github.io/react-ant-editable-tag/
+
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/react-ant-editable-tag/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/react-ant-editable-tag
+[version-url]: https://npmjs.org/package/@jswork/react-ant-editable-tag
+
+[license-image]: https://img.shields.io/npm/l/@jswork/react-ant-editable-tag
+[license-url]: https://github.com/afeiship/react-ant-editable-tag/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/react-ant-editable-tag
+[size-url]: https://github.com/afeiship/react-ant-editable-tag/blob/master/dist/react-ant-editable-tag.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/react-ant-editable-tag
+[download-url]: https://www.npmjs.com/package/@jswork/react-ant-editable-tag

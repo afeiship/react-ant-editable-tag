@@ -1,6 +1,7 @@
-import ReactAntEditableTag from '../src/main';
-import ReactDOM from 'react-dom';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactAntEditableTag from '../src/main';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -15,8 +16,10 @@ class App extends React.Component {
   render() {
     const { value } = this.state;
     return (
-      <div className="app-container">
-        <button className="button" onClick={this.setRandomValue}>
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-ant-editable-tag">
+        <button className="button is-primary is-fullwidth mb-2" onClick={this.setRandomValue}>
           SetRandomValue
         </button>
         <ReactAntEditableTag
@@ -26,7 +29,7 @@ class App extends React.Component {
             console.log(e.target.value);
           }}
         />
-      </div>
+      </ReactDemokit>
     );
   }
 }

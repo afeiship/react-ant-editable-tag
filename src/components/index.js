@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import noop from '@feizheng/noop';
-import objectAssign from 'object-assign';
+import noop from '@jswork/noop';
 import { Tag, Input, Icon } from 'antd';
 
 const CLASS_NAME = 'react-ant-editable-tag';
